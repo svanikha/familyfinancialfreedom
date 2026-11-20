@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Family Financial Freedom</title>
+  <meta name="description" content="Catat pemasukan dan pengeluaran keluarga">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FFF">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="top-row">
+        <div class="app-name">Family Financial Freedom</div>
+        <button class="user-chip" id="userBtn" aria-label="Akun saya"></button>
+      </div>
+      <div class="month-switch">
+        <button class="icon-btn" id="prevMonth" aria-label="Bulan sebelumnya">‹</button>
+        <span id="monthLabel"></span>
+        <button class="icon-btn" id="nextMonth" aria-label="Bulan berikutnya">›</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view"></main>
+
+  <nav class="bottomnav">
+    <button data-tab="home" class="active"><span class="ni">⌂</span>Beranda</button>
+    <button data-tab="history"><span class="ni">☰</span>Riwayat</button>
+    <button data-tab="add" class="add-btn" aria-label="Tambah transaksi"><span>＋</span></button>
+    <button data-tab="report"><span class="ni">▤</span>Laporan</button>
+    <button data-tab="settings"><span class="ni">⚙</span>Atur</button>
+  </nav>
+
+  <div id="auth" hidden></div>
+  <dialog id="sheet"></dialog>
+  <div id="toast" role="status"></div>
+
+  <script src="config.js"></script>
+  <script src="cloud.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
